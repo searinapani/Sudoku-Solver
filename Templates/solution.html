@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sudoku Solution</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Sudoku Solution</h1>
+    <table>
+        {% for row in board %}
+            <tr>
+                {% for num in row %}
+                    <td>{{ num }}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+    <a href="/">Solve another puzzle</a>
+</body>
+</html>
